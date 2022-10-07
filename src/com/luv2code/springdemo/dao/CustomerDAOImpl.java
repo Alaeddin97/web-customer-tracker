@@ -9,9 +9,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.luv2code.springdemo.entity.Customer;
 
+@Repository
 public class CustomerDAOImpl implements CustomerDAO {
 
 	@Autowired
@@ -24,7 +26,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		// get the current HIBERNATE session
 		Session currentSession= sessionFactory.getCurrentSession();
 		//create a query 
-		Query<Customer>query= currentSession.createQuery("from c Customer", Customer.class);
+		Query<Customer>query= currentSession.createQuery("from Customer", Customer.class);
 		// return the list of customers
 		listCustomers=query.getResultList();
 		return listCustomers;
