@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"/>
+ 
 <title>List Customers</title>
 </head>
 <body>
