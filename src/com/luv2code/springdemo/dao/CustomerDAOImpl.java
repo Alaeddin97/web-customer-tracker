@@ -3,7 +3,6 @@ package com.luv2code.springdemo.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.transaction.Transactional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,14 +12,14 @@ import org.springframework.stereotype.Repository;
 
 import com.luv2code.springdemo.entity.Customer;
 
-@Repository
+@Repository 
 public class CustomerDAOImpl implements CustomerDAO {
 
 	@Autowired
 	SessionFactory sessionFactory;
 
 	@Override
-	@Transactional
+	//@Transactional
 	public List<Customer> getCustomers() {
 		List<Customer> listCustomers = new ArrayList<Customer>();
 		// get the current HIBERNATE session
