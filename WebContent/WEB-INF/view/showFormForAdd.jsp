@@ -16,8 +16,10 @@
 	</div>
 	<div id="container">
 		<h3>Save Customer</h3>
+		
 		<form:form action="saveCustomer" modelAttribute="customer"
 			method="POST">
+			<form:hidden path="id"/>
 			<table>
 				<tbody>
 					<tr>
@@ -40,6 +42,8 @@
 				</tbody>
 			</table>
 		</form:form>
+		<div style=""></div>
+		<a href="${pageContext.request.contextPath}/customer/list">Back to customers' list</a>
 	</div>
 </body>
 </html>
