@@ -2,8 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"/>
- 
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/style.css" />
+
 <title>List Customers</title>
 </head>
 <body>
@@ -14,6 +15,10 @@
 	</div>
 	<div id="container">
 		<div id="content">
+			<!-- put new button - add customer -->
+			<input class="add-button" type="button"
+				onClick="window.location.href='showFormForAdd';return false"
+				value="Add Customer" />
 			<table>
 				<tr>
 					<th>First name</th>
